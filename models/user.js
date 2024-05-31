@@ -11,12 +11,17 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    played: {
+      type: Number,
+      default: 0,
+      min: 0,
+    },
     won: {
       type: Number,
       default: 0,
       min: 0,
     },
-    lost: {
+    jackpot: {
       type: Number,
       default: 0,
       min: 0,

@@ -63,9 +63,16 @@ router.post(
 
       // bet amount deducted
       user.points -= betAmount;
+      user.played += 1;
 
       if (isWon) {
+        // won
+        user.won += 1;
+
         if (isJackpot) {
+          // jackpot
+          user.jackpot += 1;
+
           // jackpot add five times of bet amount
           user.points += 5 * betAmount;
         } else {
